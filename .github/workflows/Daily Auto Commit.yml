@@ -6,6 +6,9 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch: # 수동으로도 실행할 수 있게 설정
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
