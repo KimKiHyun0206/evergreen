@@ -1,0 +1,47 @@
+name: Setup Daily Log Entry
+
+on:
+  schedule:
+    # 한국 시간(KST) 오전 9시 = UTC 00:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add-daily-line:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Insert Decorated Daily Date
+        run: |
+          # 1. 한국 시간 기준 날짜 및 요일 구하기
+          TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
+          
+          # 2. 파일이 없으면 초기 제목 생성
+          if [ ! -f daily-log.md ]; then
+            echo "# 🌳 My Daily Learning Log" > daily-log.md
+            echo -e "하루의 성장을 기록합니다.\n" >> daily-log.md
+          fi
+
+          # 3. 새로운 날짜 섹션 생성 (인용구 + 이모지 + 볼드체)
+          echo "> ### 📅 **$TODAY**" > temp_entry.md
+          echo "- " >> temp_entry.md
+          echo -e "\n---" >> temp_entry.md
+          echo -e "\n" >> temp_entry.md
+          
+          # 4. 기존 내용을 새 섹션 뒤에 붙이기
+          cat daily-log.md >> temp_entry.md
+          mv temp_entry.md daily-log.md
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add daily-log.md
+          TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
+          git commit -m "chore: add daily log entry for $TODAY" || echo "No changes to commit"
+          git push
