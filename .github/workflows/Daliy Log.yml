@@ -1,46 +1,19 @@
-name: Setup Daily Log Entry
-
-on:
-  schedule:
-    # 한국 시간(KST) 오전 9시 = UTC 00:00
-    - cron: '0 0 * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  add-daily-line:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Insert Daily Date at the Very Top
+- name: Insert Decorated Daily Date
         run: |
-          # 한국 시간 기준 날짜 구하기
-          TODAY=$(date -u -d "+9 hours" +%Y-%m-%d)
+          # 한국 시간 기준 날짜 및 요일 구하기 (예: 2025-12-22 Mon)
+          TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
           
-          # 1. 파일이 아예 없으면 기본 제목을 포함해서 생성
           if [ ! -f daily-log.md ]; then
             echo "# 🌳 My Daily Learning Log" > daily-log.md
-            echo -e "하루의 기록을 남깁니다.\n" >> daily-log.md
+            echo -e "하루의 성장을 기록합니다.\n" >> daily-log.md
           fi
 
-          # 2. 새로운 날짜 줄을 임시 파일의 맨 위에 작성
-          echo "* $TODAY: " > temp_log.md
+          # 1. 예쁘게 꾸며진 날짜 헤더 생성
+          # > ### 📅 **2025-12-22 (Mon)** 형태
+          echo "> ### 📅 **$TODAY**" > temp_entry.md
+          echo "- " >> temp_entry.md  # 바로 내용을 적을 수 있게 불렛 포인트 추가
+          echo -e "\n" >> temp_entry.md # 한 줄 띄우기
           
-          # 3. 기존 파일의 내용을 그 뒤에 붙임
-          cat daily-log.md >> temp_log.md
-          
-          # 4. 임시 파일을 다시 원본 파일로 교체
-          mv temp_log.md daily-log.md
-
-      - name: Commit and Push
-        run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "actions@github.com"
-          git add daily-log.md
-          TODAY=$(date -u -d "+9 hours" +%Y-%m-%d)
-          git commit -m "chore: add top log entry for $TODAY" || echo "No changes"
-          git push
+          # 2. 기존 내용을 뒤에 붙이기
+          cat daily-log.md >> temp_entry.md
+          mv temp_entry.md daily-log.md
