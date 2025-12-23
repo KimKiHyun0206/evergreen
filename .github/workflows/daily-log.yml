@@ -2,8 +2,7 @@ name: Setup Daily Log Entry
 
 on:
   schedule:
-    # 한국 시간(KST) 오전 9시 = UTC 00:00
-    - cron: '0 0 * * *'
+    - cron: '17 0 * * *'
   workflow_dispatch:
 
 permissions:
