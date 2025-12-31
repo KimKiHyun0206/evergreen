@@ -27,7 +27,7 @@ jobs:
           fi
 
           # 3. 새로운 날짜 섹션 생성 (인용구 + 이모지 + 볼드체)
-          echo "> ### 📅 **$TODAY**" > temp_entry.md
+          echo "> ### 🌱 **$TODAY**" > temp_entry.md
           echo "- " >> temp_entry.md
           echo -e "\n---" >> temp_entry.md
           echo -e "\n" >> temp_entry.md
