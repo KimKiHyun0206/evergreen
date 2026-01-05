@@ -2,7 +2,6 @@ name: Setup Daily Log Entry
 
 on:
   schedule:
-    # 9시 정각 지연을 피하기 위해 9시 17분(UTC 00:17)으로 설정
     - cron: '17 0 * * *'
   workflow_dispatch:
 
@@ -16,36 +15,39 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Insert Decorated Daily Date
+      - name: Insert Daily Log and Update README
         run: |
           # 1. 한국 시간 기준 날짜 및 월 구하기
           MONTH_PATH=$(date -u -d "+9 hours" "+%Y-%m")
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
           FILENAME="logs/daily-log-${MONTH_PATH}.md"
           
-          # 2. logs 폴더가 없으면 생성
+          # 2. logs 폴더 생성
           mkdir -p logs
           
-          # 3. 해당 월의 파일이 없으면 초기 제목 생성
+          # 3. 월별 로그 파일 생성 및 내용 추가 (아래로 쌓기)
           if [ ! -f "$FILENAME" ]; then
             echo "# 📅 $MONTH_PATH Learning Log" > "$FILENAME"
             echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
             echo "---" >> "$FILENAME"
           fi
 
-          # 4. 오늘의 새로운 날짜 섹션을 파일 끝(Bottom)에 추가
           echo -e "\n> ### 🌱 **$TODAY**" >> "$FILENAME"
           echo "- " >> "$FILENAME"
           echo -e "\n---" >> "$FILENAME"
+
+          # 4. README.md의 '이번 달 로그' 링크를 현재 월로 자동 업데이트
+          # [📅 이번 달 로그 확인하기](./logs/daily-log-XXXX-XX.md) 형식을 찾아 교체합니다.
+          sed -i "s|\[📅 이번 달 로그 확인하기\](.*)|\[📅 이번 달 로그 확인하기\](./${FILENAME})|g" README.md
 
       - name: Commit and Push
         run: |
           git config --global user.name "Duskafka"
           git config --global user.email "rlarlgus0206@naver.com"
           
-          # 파일 하나가 아니라 logs 폴더 전체의 변경사항을 추가
-          git add logs/
+          # logs 폴더와 README.md의 변경사항을 모두 포함
+          git add logs/ README.md
           
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
-          git commit -m "chore: add daily log entry for $TODAY" || echo "No changes to commit"
+          git commit -m "chore: update daily log and README link for $TODAY" || echo "No changes to commit"
           git push
