@@ -33,10 +33,11 @@ jobs:
           fi
 
           # 4. 접이식(details) 구조로 오늘의 섹션을 파일 끝에 추가
+          # <bold> 대신 <b> 태그를 사용하고, 괄호 문구를 제거했습니다.
           echo -e "\n<details>" >> "$FILENAME"
-          echo "<summary>🌱 <bold>$TODAY<bold> (클릭하여 보기)</summary>" >> "$FILENAME"
+          echo "<summary>🌱 <b>$TODAY</b></summary>" >> "$FILENAME"
           echo -e "<div markdown=\"1\">\n<br>\n" >> "$FILENAME"
-          echo "- " >> "$FILENAME" # 여기에 내용을 작성하게 됩니다.
+          echo "- " >> "$FILENAME"
           echo -e "\n</div>" >> "$FILENAME"
           echo "</details>" >> "$FILENAME"
           echo -e "\n---" >> "$FILENAME"
@@ -49,7 +50,6 @@ jobs:
           git config --global user.name "Duskafka"
           git config --global user.email "rlarlgus0206@naver.com"
           
-          # logs 폴더와 README.md의 변경사항을 모두 포함
           git add logs/ README.md
           
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
