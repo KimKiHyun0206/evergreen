@@ -7,4 +7,12 @@
   ![Update](https://img.shields.io/badge/Last_Update-Daily-success?style=flat-square)
   ![GitHub Actions](https://img.shields.io/badge/Automation-Enabled-blue?style=flat-square&logo=githubactions)
 
+---
+
+---
+
+### 🪴 Growing Records
+- [📅 이번 달 로그 확인하기](./logs/daily-log-2026-01.md)
+- [📂 전체 로그 보러가기](./logs/)
+
 </div>
