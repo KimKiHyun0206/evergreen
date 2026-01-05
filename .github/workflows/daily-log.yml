@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Insert Daily Log and Update README
+      - name: Insert Collapsible Daily Log and Update README
         run: |
           # 1. 한국 시간 기준 날짜 및 월 구하기
           MONTH_PATH=$(date -u -d "+9 hours" "+%Y-%m")
@@ -25,19 +25,23 @@ jobs:
           # 2. logs 폴더 생성
           mkdir -p logs
           
-          # 3. 월별 로그 파일 생성 및 내용 추가 (아래로 쌓기)
+          # 3. 월별 로그 파일 생성 (처음 한 번만)
           if [ ! -f "$FILENAME" ]; then
             echo "# 📅 $MONTH_PATH Learning Log" > "$FILENAME"
             echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
             echo "---" >> "$FILENAME"
           fi
 
-          echo -e "\n> ### 🌱 **$TODAY**" >> "$FILENAME"
-          echo "- " >> "$FILENAME"
+          # 4. 접이식(details) 구조로 오늘의 섹션을 파일 끝에 추가
+          echo -e "\n<details>" >> "$FILENAME"
+          echo "<summary>🌱 **$TODAY** (클릭하여 보기)</summary>" >> "$FILENAME"
+          echo -e "<div markdown=\"1\">\n<br>\n" >> "$FILENAME"
+          echo "- " >> "$FILENAME" # 여기에 내용을 작성하게 됩니다.
+          echo -e "\n</div>" >> "$FILENAME"
+          echo "</details>" >> "$FILENAME"
           echo -e "\n---" >> "$FILENAME"
 
-          # 4. README.md의 '이번 달 로그' 링크를 현재 월로 자동 업데이트
-          # [📅 이번 달 로그 확인하기](./logs/daily-log-XXXX-XX.md) 형식을 찾아 교체합니다.
+          # 5. README.md 링크 업데이트
           sed -i "s|\[📅 이번 달 로그 확인하기\](.*)|\[📅 이번 달 로그 확인하기\](./${FILENAME})|g" README.md
 
       - name: Commit and Push
