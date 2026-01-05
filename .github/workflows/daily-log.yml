@@ -34,7 +34,7 @@ jobs:
 
           # 4. 접이식(details) 구조로 오늘의 섹션을 파일 끝에 추가
           echo -e "\n<details>" >> "$FILENAME"
-          echo "<summary>🌱 **$TODAY** (클릭하여 보기)</summary>" >> "$FILENAME"
+          echo "<summary>🌱 <bold>TODAY<bold> (클릭하여 보기)</summary>" >> "$FILENAME"
           echo -e "<div markdown=\"1\">\n<br>\n" >> "$FILENAME"
           echo "- " >> "$FILENAME" # 여기에 내용을 작성하게 됩니다.
           echo -e "\n</div>" >> "$FILENAME"
