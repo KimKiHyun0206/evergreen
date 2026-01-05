@@ -56,3 +56,15 @@
 </details>
 
 ---
+
+<details>
+<summary>🌱 <bold>2026-01-05 (Mon)<bold> (클릭하여 보기)</summary>
+<div markdown="1">
+<br>
+
+- 
+
+</div>
+</details>
+
+---
