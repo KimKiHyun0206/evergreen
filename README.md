@@ -9,10 +9,9 @@
 
 ---
 
----
-
-### 🪴 Growing Records
-- [📅 이번 달 로그 확인하기](./logs/daily-log-2026-01.md)
-- [📂 전체 로그 보러가기](./logs/)
 
 </div>
+
+### Growing Records
+- [📅 이번 달 로그 확인하기](./logs/daily-log-2026-01.md)
+- [📂 전체 로그 보러가기](./logs/)
