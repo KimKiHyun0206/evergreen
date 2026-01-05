@@ -29,18 +29,16 @@ jobs:
           if [ ! -f "$FILENAME" ]; then
             echo "# 📅 $MONTH_PATH Learning Log" > "$FILENAME"
             echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
-            echo "---" >> "$FILENAME"
           fi
 
           # 4. 접이식(details) 구조로 오늘의 섹션을 파일 끝에 추가
-          # <bold> 대신 <b> 태그를 사용하고, 괄호 문구를 제거했습니다.
+          # 날짜별 구분선(---)을 제거했습니다.
           echo -e "\n<details>" >> "$FILENAME"
           echo "<summary>🌱 <b>$TODAY</b></summary>" >> "$FILENAME"
           echo -e "<div markdown=\"1\">\n<br>\n" >> "$FILENAME"
           echo "- " >> "$FILENAME"
           echo -e "\n</div>" >> "$FILENAME"
           echo "</details>" >> "$FILENAME"
-          echo -e "\n---" >> "$FILENAME"
 
           # 5. README.md 링크 업데이트
           sed -i "s|\[📅 이번 달 로그 확인하기\](.*)|\[📅 이번 달 로그 확인하기\](./${FILENAME})|g" README.md
