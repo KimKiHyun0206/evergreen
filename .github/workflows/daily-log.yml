@@ -30,17 +30,13 @@ jobs:
           if [ ! -f "$FILENAME" ]; then
             echo "# 📅 $MONTH_PATH Learning Log" > "$FILENAME"
             echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
+            echo "---" >> "$FILENAME"
           fi
 
-          # 4. 오늘의 새로운 날짜 섹션 생성 (최신 날짜가 위로 오게)
-          echo "> ### 🌱 **$TODAY**" > temp_entry.md
-          echo "- " >> temp_entry.md
-          echo -e "\n---" >> temp_entry.md
-          echo -e "\n" >> temp_entry.md
-          
-          # 5. 기존 월별 파일 내용을 새 섹션 뒤에 붙이기
-          cat "$FILENAME" >> temp_entry.md
-          mv temp_entry.md "$FILENAME"
+          # 4. 오늘의 새로운 날짜 섹션을 파일 끝(Bottom)에 추가
+          echo -e "\n> ### 🌱 **$TODAY**" >> "$FILENAME"
+          echo "- " >> "$FILENAME"
+          echo -e "\n---" >> "$FILENAME"
 
       - name: Commit and Push
         run: |
