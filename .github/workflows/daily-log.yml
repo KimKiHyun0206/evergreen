@@ -2,7 +2,8 @@ name: Setup Daily Log Entry
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # 9시 정각 지연을 피하기 위해 9시 17분(UTC 00:17)으로 설정
+    - cron: '17 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,34 +14,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Insert Decorated Daily Date
         run: |
-          # 1. 한국 시간 기준 날짜 및 요일 구하기
+          # 1. 한국 시간 기준 날짜 및 월 구하기
+          MONTH_PATH=$(date -u -d "+9 hours" "+%Y-%m")
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
+          FILENAME="logs/daily-log-${MONTH_PATH}.md"
           
-          # 2. 파일이 없으면 초기 제목 생성
-          if [ ! -f daily-log.md ]; then
-            echo "# 🌳 My Daily Learning Log" > daily-log.md
-            echo -e "하루의 성장을 기록합니다.\n" >> daily-log.md
+          # 2. logs 폴더가 없으면 생성
+          mkdir -p logs
+          
+          # 3. 해당 월의 파일이 없으면 초기 제목 생성
+          if [ ! -f "$FILENAME" ]; then
+            echo "# 📅 $MONTH_PATH Learning Log" > "$FILENAME"
+            echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
           fi
 
-          # 3. 새로운 날짜 섹션 생성 (인용구 + 이모지 + 볼드체)
+          # 4. 오늘의 새로운 날짜 섹션 생성 (최신 날짜가 위로 오게)
           echo "> ### 🌱 **$TODAY**" > temp_entry.md
           echo "- " >> temp_entry.md
           echo -e "\n---" >> temp_entry.md
           echo -e "\n" >> temp_entry.md
           
-          # 4. 기존 내용을 새 섹션 뒤에 붙이기
-          cat daily-log.md >> temp_entry.md
-          mv temp_entry.md daily-log.md
+          # 5. 기존 월별 파일 내용을 새 섹션 뒤에 붙이기
+          cat "$FILENAME" >> temp_entry.md
+          mv temp_entry.md "$FILENAME"
 
       - name: Commit and Push
         run: |
           git config --global user.name "Duskafka"
           git config --global user.email "rlarlgus0206@naver.com"
-          git add daily-log.md
+          
+          # 파일 하나가 아니라 logs 폴더 전체의 변경사항을 추가
+          git add logs/
+          
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
           git commit -m "chore: add daily log entry for $TODAY" || echo "No changes to commit"
           git push
