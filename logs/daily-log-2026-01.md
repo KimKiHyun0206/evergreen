@@ -68,7 +68,8 @@
 <div markdown="1">
 <br>
 
-- 
+- Limit Rate 조사 및 연구
+- AWS의 기능을 사용하는 것이 좋을지 아니면 Redis로 직접 구현하는 것이 좋을지 조사 및 연구함.
 
 </div>
 </details>
