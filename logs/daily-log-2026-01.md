@@ -79,7 +79,7 @@
 <div markdown="1">
 <br>
 
-- 
+- Aetheria 프로젝트 PR 리뷰 확인 및 답변
 
 </div>
 </details>
