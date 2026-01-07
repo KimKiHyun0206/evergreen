@@ -31,12 +31,10 @@ jobs:
             echo -e "이번 달의 성장을 기록합니다. 🌱\n" >> "$FILENAME"
           fi
 
-          # 4. 접이식(details) 구조로 오늘의 섹션을 파일 끝에 추가 (색상 제거 버전)
-          echo -e "\n<details>" >> "$FILENAME"
-          echo "<summary>🌱 <b>$TODAY</b></summary>" >> "$FILENAME"
-          echo -e "<div markdown=\"1\">\n<br>\n" >> "$FILENAME"
+          # 4. 접이식 구조로 오늘의 섹션 추가 (줄바꿈 최적화)
+          # 요청하신 대로 summary 안에 이모지를 넣고 불필요한 태그를 제거했습니다.
+          echo -e "\n<details><summary><b>🌱 $TODAY</b></summary>\n" >> "$FILENAME"
           echo "- " >> "$FILENAME"
-          echo -e "\n</div>" >> "$FILENAME"
           echo "</details>" >> "$FILENAME"
 
           # 5. README.md 링크 업데이트
@@ -50,5 +48,5 @@ jobs:
           git add logs/ README.md
           
           TODAY=$(date -u -d "+9 hours" "+%Y-%m-%d (%a)")
-          git commit -m "chore: revert to clean style daily log for $TODAY" || echo "No changes to commit"
+          git commit -m "$TODAY" || echo "No changes to commit"
           git push
