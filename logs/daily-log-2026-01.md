@@ -80,6 +80,7 @@
 <br>
 
 - Aetheria 프로젝트 PR 리뷰 확인 및 답변
+- 코드 문서화
 
 </div>
 </details>
