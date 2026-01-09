@@ -81,5 +81,7 @@
 
 <details><summary><b>🌱 2026-01-09 (Fri)</b></summary>
 
-- 
+- 문서화 완료
+<img width="907" height="683" alt="image" src="https://github.com/user-attachments/assets/b1a31e70-8c8d-44c0-a0b8-4d92d602b9f0" />
+
 </details>
