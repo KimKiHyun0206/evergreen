@@ -82,6 +82,9 @@
 <details><summary><b>🌱 2026-01-09 (Fri)</b></summary>
 
 - 문서화 완료
+
 <img width="907" height="683" alt="image" src="https://github.com/user-attachments/assets/b1a31e70-8c8d-44c0-a0b8-4d92d602b9f0" />
+
+- 코드 리펙토링: 서비스 레이어에서 외부 API 요청, 트랜잭션 제어를 모두 하던 것의 책임을 분리하여 헬퍼 클래스에 책임을 나눔.
 
 </details>
