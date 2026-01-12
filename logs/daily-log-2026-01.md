@@ -101,3 +101,8 @@
 - 이 리뷰에 따라 기존에 `BusinessException`에 과도한 책임이 몰려있던 것을 `UserException`, `AuthException` 등의 예외 클래스로 세분화하고 에러 메시지 또한 `UserErrorCode`, `AuthErrorCode` 등으로 세분화하여 관리할 수 있도록 함.
 - 이에 따라서 어느 정도로 세분화 할지도 고민함(JWT와 OAUTH는 같은 인증인데 `AuthException`에 둘 것인가?), 이에 대한 결론으로 세분화하기로 함. OAUTH 중 외부 API를 사용하는 부분에서 발생하는 예외와 JWT 예외를 분리하도록 함.
 </details>
+
+<details><summary><b>🌱 2026-01-12 (Mon)</b></summary>
+
+- 
+</details>
