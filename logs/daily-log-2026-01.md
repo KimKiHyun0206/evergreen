@@ -121,3 +121,8 @@
 - 그리고 Redis의 원자성을 지키는 방법에 대해서 조사하고 연구함. 향후 프로젝트에 적용해볼 계획. 
 
 </details>
+
+<details><summary><b>🌱 2026-01-15 (Thu)</b></summary>
+
+- 
+</details>
