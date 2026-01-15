@@ -124,5 +124,5 @@
 
 <details><summary><b>🌱 2026-01-15 (Thu)</b></summary>
 
-- 
+- 리프레시 토큰 블랙리스트 구현 리펙토링
 </details>
