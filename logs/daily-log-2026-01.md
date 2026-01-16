@@ -126,3 +126,8 @@
 
 - 리프레시 토큰 블랙리스트 구현 리펙토링
 </details>
+
+<details><summary><b>🌱 2026-01-16 (Fri)</b></summary>
+
+- 
+</details>
