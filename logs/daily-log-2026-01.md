@@ -131,3 +131,8 @@
 
 - 리프레시 토큰 블랙리스트 구현 PR 리뷰 내용 반영 후 `develop`브랜치로 `merge`
 </details>
+
+<details><summary><b>🌱 2026-01-17 (Sat)</b></summary>
+
+- 
+</details>
