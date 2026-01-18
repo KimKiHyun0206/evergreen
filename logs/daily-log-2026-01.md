@@ -140,5 +140,5 @@
 
 <details><summary><b>🌱 2026-01-18 (Sun)</b></summary>
 
-- 
+- **AWS 인스턴스 공부**: EC2, ECS, ECR, Fargate에 대해서 학습함.
 </details>
