@@ -142,3 +142,8 @@
 
 - **AWS 인스턴스 공부**: EC2, ECS, ECR, Fargate에 대해서 학습함.
 </details>
+
+<details><summary><b>🌱 2026-01-19 (Mon)</b></summary>
+
+- 
+</details>
