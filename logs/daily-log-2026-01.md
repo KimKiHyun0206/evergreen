@@ -145,5 +145,5 @@
 
 <details><summary><b>🌱 2026-01-19 (Mon)</b></summary>
 
-- 
+- **AWS WAF 학습**: WAF가 어떤 기능을 가지고 있어 서버를 구성하는데 어떻게 사용되는 것이 좋은지 학습.
 </details>
