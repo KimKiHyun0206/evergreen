@@ -153,3 +153,8 @@
 - AWS ElastiCache 학습
 - Redis에 저장할 때 JSON으로 저장하는 것과 바이너리로 저장하는 것의 장단점을 공부함.
 </details>
+
+<details><summary><b>🌱 2026-01-21 (Wed)</b></summary>
+
+- 
+</details>
