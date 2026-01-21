@@ -156,5 +156,6 @@
 
 <details><summary><b>🌱 2026-01-21 (Wed)</b></summary>
 
-- 
+- AWS Lambda, AWS SQS, AWS S3 학습
+- Lambda로 GPX 파일을 압축하는 Polyline 알고리즘을 돌릴까라는 생각을 해봄 (Polyline 알고리즘이 시간 복잡도가 크기 때문에 본 서버에서 돌리면 사용자 응답이 느려질 수 있기 때문이다.)
 </details>
