@@ -162,15 +162,15 @@
 
 <details><summary><b>🌱 2026-01-22 (Thu)</b></summary>
 
-- 
+- 휴식
 </details>
 
 <details><summary><b>🌱 2026-01-23 (Fri)</b></summary>
 
-- 
+- 여행
 </details>
 
 <details><summary><b>🌱 2026-01-24 (Sat)</b></summary>
 
-- 
+- 여행
 </details>
