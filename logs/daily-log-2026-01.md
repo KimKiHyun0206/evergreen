@@ -174,3 +174,8 @@
 
 - 여행
 </details>
+
+<details><summary><b>🌱 2026-01-25 (Sun)</b></summary>
+
+- 
+</details>
