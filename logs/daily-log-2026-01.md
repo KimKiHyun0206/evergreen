@@ -177,10 +177,10 @@
 
 <details><summary><b>🌱 2026-01-25 (Sun)</b></summary>
 
-- 
+- AWS 공부
 </details>
 
 <details><summary><b>🌱 2026-01-26 (Mon)</b></summary>
 
-- 
+- AWS 공부
 </details>
