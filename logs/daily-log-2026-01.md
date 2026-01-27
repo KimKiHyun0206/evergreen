@@ -185,3 +185,8 @@
 - AWS 공부
 - 후배들이 공부할 수 있도록 Spring 로드맵 레포지토리 생성 및 로드맵 생성.
 </details>
+
+<details><summary><b>🌱 2026-01-27 (Tue)</b></summary>
+
+- 
+</details>
