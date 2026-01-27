@@ -188,5 +188,6 @@
 
 <details><summary><b>🌱 2026-01-27 (Tue)</b></summary>
 
-- 
+- 후배들이 공부할 수 있도록 Network 및 OS 로드맵 생성.
+- AWS CDK로 RDS와 Redis를 Private Subnet에 생성하는 코드 작성.
 </details>
