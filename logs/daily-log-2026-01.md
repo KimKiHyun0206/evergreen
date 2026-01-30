@@ -200,10 +200,10 @@
 
 <details><summary><b>🌱 2026-01-29 (Thu)</b></summary>
 
-- 
+- AWS CDK 코드 작성
 </details>
 
 <details><summary><b>🌱 2026-01-30 (Fri)</b></summary>
 
-- 
+- AWS CDK Stack 및 Construct 개념 학습
 </details>
