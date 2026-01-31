@@ -207,3 +207,8 @@
 
 - AWS CDK Stack 및 Construct 개념 학습
 </details>
+
+<details><summary><b>🌱 2026-01-31 (Sat)</b></summary>
+
+- 
+</details>
