@@ -210,5 +210,5 @@
 
 <details><summary><b>🌱 2026-01-31 (Sat)</b></summary>
 
-- 
+- AWS CDK Grant 및  App 개념 학습
 </details>
