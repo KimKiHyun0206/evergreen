@@ -4,5 +4,5 @@
 
 <details><summary><b>🌱 2026-02-01 (Sun)</b></summary>
 
-- 
+- AWS CDK 핵심 개념 학습: Bootstrap, Aspects.
 </details>
