@@ -6,3 +6,8 @@
 
 - AWS CDK 핵심 개념 학습: Bootstrap, Aspects.
 </details>
+
+<details><summary><b>🌱 2026-02-02 (Mon)</b></summary>
+
+- 
+</details>
