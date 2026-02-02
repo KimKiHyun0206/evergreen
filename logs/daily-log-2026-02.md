@@ -9,5 +9,5 @@
 
 <details><summary><b>🌱 2026-02-02 (Mon)</b></summary>
 
-- 
+- AWSX CDK 핵심 개념 학습: Context & Parameters, Assets.
 </details>
