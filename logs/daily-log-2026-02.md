@@ -11,3 +11,8 @@
 
 - AWSX CDK 핵심 개념 학습: Context & Parameters, Assets.
 </details>
+
+<details><summary><b>🌱 2026-02-03 (Tue)</b></summary>
+
+- 
+</details>
