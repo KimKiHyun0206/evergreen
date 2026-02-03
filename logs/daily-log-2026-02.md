@@ -9,10 +9,10 @@
 
 <details><summary><b>🌱 2026-02-02 (Mon)</b></summary>
 
-- AWSX CDK 핵심 개념 학습: Context & Parameters, Assets.
+- AWS CDK 핵심 개념 학습: Context & Parameters, Assets.
 </details>
 
 <details><summary><b>🌱 2026-02-03 (Tue)</b></summary>
 
-- 
+- [AWS CDK 합성과 배포 학습](https://velog.io/@duskafka/AWS-CDK-%ED%95%A9%EC%84%B1%EA%B3%BC-%EB%B0%B0%ED%8F%AC)
 </details>
