@@ -16,3 +16,8 @@
 
 - [AWS CDK 합성과 배포 학습](https://velog.io/@duskafka/AWS-CDK-%ED%95%A9%EC%84%B1%EA%B3%BC-%EB%B0%B0%ED%8F%AC)
 </details>
+
+<details><summary><b>🌱 2026-02-04 (Wed)</b></summary>
+
+- 
+</details>
