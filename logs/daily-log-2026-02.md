@@ -19,5 +19,5 @@
 
 <details><summary><b>🌱 2026-02-04 (Wed)</b></summary>
 
-- 
+- AWS CDK 학습: `cdk diff`와 `HotSwap`에 대해서 학습.
 </details>
