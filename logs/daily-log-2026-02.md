@@ -24,5 +24,6 @@
 
 <details><summary><b>🌱 2026-02-05 (Thu)</b></summary>
 
-- 
+- AWS CloudFormatiion 학습: AWS CDK의 동작을 이해하기 위해 학습함.
+- AWS CDK Rollback 학습.
 </details>
