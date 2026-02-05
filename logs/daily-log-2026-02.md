@@ -21,3 +21,8 @@
 
 - AWS CDK 학습: `cdk diff`와 `HotSwap`에 대해서 학습.
 </details>
+
+<details><summary><b>🌱 2026-02-05 (Thu)</b></summary>
+
+- 
+</details>
