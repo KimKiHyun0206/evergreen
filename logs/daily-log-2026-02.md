@@ -27,3 +27,8 @@
 - AWS CloudFormatiion 학습: AWS CDK의 동작을 이해하기 위해 학습함.
 - AWS CDK Rollback 학습.
 </details>
+
+<details><summary><b>🌱 2026-02-06 (Fri)</b></summary>
+
+- 
+</details>
