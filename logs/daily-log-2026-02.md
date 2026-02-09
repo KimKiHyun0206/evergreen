@@ -35,15 +35,15 @@
 
 <details><summary><b>🌱 2026-02-07 (Sat)</b></summary>
 
-- 
+- AWS CDK 코딩
 </details>
 
 <details><summary><b>🌱 2026-02-08 (Sun)</b></summary>
 
-- 
+- AWS CDK 코딩
 </details>
 
 <details><summary><b>🌱 2026-02-09 (Mon)</b></summary>
 
-- 
+- 휴식
 </details>
