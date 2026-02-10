@@ -47,3 +47,8 @@
 
 - 휴식
 </details>
+
+<details><summary><b>🌱 2026-02-10 (Tue)</b></summary>
+
+- 
+</details>
