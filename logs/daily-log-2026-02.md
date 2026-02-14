@@ -72,3 +72,8 @@
     4. 리프레시 토큰 기반 세션 관리 정책
 - **Aetheria 프로젝트 Limit Rate 기능 구현**: Redis와 Lua Script를 사용하여 구현 (테스트는 아직)
 </details>
+
+<details><summary><b>🌱 2026-02-14 (Sat)</b></summary>
+
+- 
+</details>
