@@ -75,10 +75,10 @@
 
 <details><summary><b>🌱 2026-02-14 (Sat)</b></summary>
 
-- 
+- 휴식
 </details>
 
 <details><summary><b>🌱 2026-02-15 (Sun)</b></summary>
 
-- 
+- Limit Rate 기능 구현: Redis를 사용하여 토큰 버킷 형식으로 구현함.
 </details>
