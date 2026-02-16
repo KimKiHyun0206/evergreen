@@ -80,10 +80,10 @@
 
 <details><summary><b>🌱 2026-02-15 (Sun)</b></summary>
 
-- Limit Rate 기능 구현: Redis를 사용하여 토큰 버킷 형식으로 구현함.
+- **Rate Limit 기능 구현**: Redis를 사용하여 토큰 버킷 형식으로 구현함.
 </details>
 
 <details><summary><b>🌱 2026-02-16 (Mon)</b></summary>
 
-- 
+- **Rate Limit 기능 구현 완료**: 코드 리펙토링 및 구현, 테스트 코드 작성 완료.
 </details>
