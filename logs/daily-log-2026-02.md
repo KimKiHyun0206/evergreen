@@ -82,3 +82,8 @@
 
 - Limit Rate 기능 구현: Redis를 사용하여 토큰 버킷 형식으로 구현함.
 </details>
+
+<details><summary><b>🌱 2026-02-16 (Mon)</b></summary>
+
+- 
+</details>
