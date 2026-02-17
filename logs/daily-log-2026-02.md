@@ -90,5 +90,5 @@
 
 <details><summary><b>🌱 2026-02-17 (Tue)</b></summary>
 
-- 
+- 휴식
 </details>
