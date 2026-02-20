@@ -95,15 +95,15 @@
 
 <details><summary><b>🌱 2026-02-18 (Wed)</b></summary>
 
-- 
+- rate limit PR 완료
 </details>
 
 <details><summary><b>🌱 2026-02-19 (Thu)</b></summary>
 
-- 
+- 휴식
 </details>
 
 <details><summary><b>🌱 2026-02-20 (Fri)</b></summary>
 
-- 
+- 마인크래프트 모드 구현
 </details>
