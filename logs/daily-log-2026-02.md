@@ -107,3 +107,8 @@
 
 - 마인크래프트 모드 구현
 </details>
+
+<details><summary><b>🌱 2026-02-21 (Sat)</b></summary>
+
+- 
+</details>
