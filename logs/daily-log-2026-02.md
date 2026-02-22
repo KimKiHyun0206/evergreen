@@ -112,3 +112,8 @@
 
 - 마인크래프트 모드 구현 및 리펙토링
 </details>
+
+<details><summary><b>🌱 2026-02-22 (Sun)</b></summary>
+
+- 
+</details>
